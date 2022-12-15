@@ -120,6 +120,42 @@ prev.addEventListener('click', function(){
     } 
 })
 
+/* autoplay carousel */
+
+function autoplaySlider(){
+    if(itemActive<4){
+        items[itemActive].classList.remove('active');
+        circles[itemActive].classList.remove('active');
+        itemActive++;
+        items[itemActive].classList.add('active');
+        circles[itemActive].classList.add('active');
+        
+    } else if(itemActive==4){
+        items[itemActive].classList.remove('active');
+        circles[itemActive].classList.remove('active');
+        itemActive = 0
+        items[itemActive].classList.add('active');
+        circles[itemActive].classList.add('active');
+    } 
+}
+
+
+let myInterval = setInterval(autoplaySlider, 3000);
+
+/* autplay button */
+
+const autoplayButton = document.getElementById('autoplay-button');
+let autoplayButtonState = true;
+
+autoplayButton.addEventListener('click', function(){
+    if(autoplayButtonState){
+        autoplayButtonState = false;
+        clearInterval(myInterval);
+    } else {
+        autoplayButtonState = true;
+        myInterval = setInterval(autoplaySlider, 3000);
+    }
+})
 
 
 
