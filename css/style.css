@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,24 +20,138 @@ body{
 .slider{
     width: 80%;
     height: 100%;
+    position: relative;
 }
 
-.imgs-container{
-    width: 20%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
 
 img{
     width: 100%;
-    object-fit: cover;
 }
 
 .slider img{
     height: 100%;
+    display: none;
 }
 
+
+
+
+
+
+.show{
+    display:inline-block;
+} */
+.imgs-container{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+}
 .imgs-container img{
     height: 20%;
+    object-fit: cover;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 50vw;
+    height: 50vh;
+    position:relative;
+}
+
+.item{
+    display: none;
+}
+
+.item-slider, .item, img{
+    height: 100%
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow{
+    position: absolute;
+    width: 40px;
+    background-color: rgba(174, 174, 174, 0.509);
+    border-radius: 50px;
+    font-weight: 800; 
+    left: 120%;
+    font-size: 30px;
+    transform: translateX(-50%);
+    text-align: center;
+    cursor: pointer;
+}
+
+.prev{
+    top: 5px; 
+}
+
+.next{
+    bottom: 5px;
+}
+
+.prev:hover, .next:hover{
+    background-color: rgba(174, 174, 174, 1);   
+}
+
+.item.active{
+    display: block;
+}
+
+.circles-container{
+    display: flex;
+    justify-content: center;
+}
+
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(174, 174, 174, 0.509);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.circle.active, .circle:hover{
+    background-color: rgba(174, 174, 174, 1); 
+}
+
+
+.item-description{
+    color: white;
+    position: absolute;
+    bottom: 20px;
+    width: 90%;
+    text-align: right;
+    padding-right: 20px;
+    right:0;
+    background-color: rgba(106, 106, 106, 0.5);
+}
+
+#autoplay-button{
+    position: relative;
+    left:50vw;
+    bottom: 20vh
+}
+
+.shadow{
+    background-color: rgba(46, 46, 46, 0.5);
 }

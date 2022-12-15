@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- link css -->
         <link rel="stylesheet" href="./css/style.css">
         <title>Document</title>
@@ -11,15 +12,28 @@
     <body>
         <div class="container">
             <div class="slider">
-                <img src="./img/01.webp" alt="carousel-img">
+                <div class="item-slider">
+                    <!-- <div class="item active">
+                        <img src="./img/01.webp">
+                    </div> -->
+                    
+                </div>
+                <!--Pulsanti di navigazione prec e succ del carosello immagini-->
+                <div class="arrow next"><i class="fa-solid fa-chevron-down"></i></div>
+                <div class="arrow prev"><i class="fa-solid fa-chevron-up"></i></div>
+                <div class="circles-container">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
             </div>
-            <div class="imgs-container">
-                <img src="./img/01.webp" alt="carousel-img">
-                <img src="./img/02.webp" alt="carousel-img">
-                <img src="./img/03.webp" alt="carousel-img">
-                <img src="./img/04.webp" alt="carousel-img">
-                <img src="./img/05.webp" alt="carousel-img">
+            <div class="imgs-container" id="imgs-container">
             </div>
         </div>
+        <button id="autoplay-button">Play / Stop</button>
+        <!-- link js -->
+        <script type="text/javascript" src="./js/script.js"></script>
     </body>
 </html>
